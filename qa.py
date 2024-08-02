@@ -12,7 +12,7 @@ import streamlit as st
 def get_answer(chunks, question):
     docs = chunks.similarity_search(question)
     
-    llm = ChatOpenAI(model_name="gpt-3.5-turbo")
+    llm = ChatOpenAI(model_name="gpt-4o")
 
     chain = load_qa_chain(llm, chain_type="stuff")
 
